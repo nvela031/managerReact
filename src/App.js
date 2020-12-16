@@ -7,6 +7,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import ReduxThunk from 'redux-thunk';
 import reducers from './redurcers';
 import LoginForm from './components/common/LoginForm';
+import Router from './Router';
 
 class App extends Component {
   componentWillMount() {
@@ -33,9 +34,7 @@ class App extends Component {
     );
     return (
       <Provider store={store}>
-        <View style={{flex: 1}}>
-          <LoginForm />
-        </View>
+        <Router />
       </Provider>
     );
   }
